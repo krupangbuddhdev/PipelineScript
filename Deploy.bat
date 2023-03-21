@@ -1,1 +1,0 @@
-echo "Deploying the project"
