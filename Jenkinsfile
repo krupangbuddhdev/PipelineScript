@@ -4,25 +4,25 @@ pipeline {
         stage('Build') { 
             steps {
                 echo "Building the checked out project"
-                sh 'Build.sh'
+                sh '/home/codeware/shell_script/build.sh'
             }
         }
         stage('Unit-Test') { 
             steps {
                 echo "Running Unit Tests"
-                sh 'Unit.sh'
+                sh '/home/codeware/shell_script/unit.sh'
             }
         }
         stage('Quality-Gate') { 
             steps {
                 echo "Verifying Quality Gates"
-                sh 'Quality.sh'
+                sh '/home/codeware/shell_script/quality.sh'
             }
         }
         stage('Deploy') { 
             steps {
                 echo "Deploying to stage environments for more tests!"
-                sh 'Deploy.sh'
+                sh '/home/codeware/shell_script/deploy.sh'
             }
         }
     }
