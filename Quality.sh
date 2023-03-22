@@ -1,1 +1,1 @@
-echo "Checking the project quality"
+echo "Checking the quality of project"
